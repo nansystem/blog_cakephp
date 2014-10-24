@@ -96,3 +96,9 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+// http://www.pupha.net/archives/1751/
+App::build(array(
+  'Vendor' => array(ROOT . '/Vendor/'),
+  'Plugin' => array(ROOT . '/Plugin/')
+));
