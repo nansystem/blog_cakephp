@@ -1,0 +1,16 @@
+{
+    "name": "satoshi/blog_cakephp",
+    "description": "blog tutorial",
+    "require": {
+        "cakephp/cakephp": "2.5.*"
+    },
+    "config": {
+        "vendor-dir":"Vendor/"
+    },
+    "authors": [
+        {
+            "name": "satoshi-n",
+            "email": "sato171786@gmail.com"
+        }
+    ]
+}
