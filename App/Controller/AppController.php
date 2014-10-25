@@ -27,10 +27,20 @@ class AppController extends Controller {
 		'Auth' => [
 			'loginRedirect' => ['controller'=>'posts', 'action' => 'index'],
 			'logoutRedirect' => ['controller'=>'posts', 'action' => 'index'],
+			'authorize' => ['Controller'],
 		]
 	];
 
 	public function beforeFilter() {
 		$this->Auth->allow('index', 'view');
 	}
+
+	public function isAuthorized( $user ) {
+		if( isset($user['role']) && $user['role'] === 'admin') {
+			return true;
+		}
+		$this->redirect(array('controller' => 'posts', 'action' => 'index'));
+		return false;
+	}
+
 }

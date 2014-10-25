@@ -23,6 +23,9 @@
             <?php echo $this->Html->link('Edit', array('action' => 'edit', $post['Post']['id'])); ?>
         </td>
         <td>
+            <?php echo $post['Post']['user_id']; ?>
+        </td>
+        <td>
             <?php echo $post['Post']['created']; ?>
         </td>
     </tr>
